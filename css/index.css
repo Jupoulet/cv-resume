@@ -6,6 +6,8 @@
   --text-body: 1rem;
   --text-small: 0.875rem;
   --text-tiny: 0.75rem;
+  --title: 1.8rem;
+  --title-sub: 1.5rem;
 }
 
 /*
@@ -84,16 +86,16 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .title {
-  font-size: 1.5rem;
+  font-size: var(--title);
 }
 
 .title-job {
-  font-size: 1rem;
+  font-size: var(--title-sub);
 }
 
 .heading-bio {
   color: var(--dark-grey);
-  font-size: 0.75rem;
+  font-size: var(--text-tiny);
 }
 
 .blue {
@@ -114,6 +116,10 @@ p, h1, h2, h3, h4, h5, h6 {
   justify-content: space-between;
 }
 
+.jobDescription {
+  font-size: var(--text-body);
+}
+
 .education {
   flex-grow: 1;
 }
@@ -125,6 +131,58 @@ p, h1, h2, h3, h4, h5, h6 {
 .skillsList {
   list-style: none;
   padding-inline: 0;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --text-body: 1.4rem;
+    --text-small: 1.2rem;
+    --text-tiny: 0.85rem;
+    --title: 2rem;
+    --title-sub: 1.8rem;
+  }
+
+  .main-wrapper {
+    padding-inline: 0;
+  }
+
+  .header-wrapper {
+    flex-direction: column;
+  }
+
+  .rounded-card {
+    border-radius: 0px;
+    border: none;
+  }
+
+  h3.blue {
+    font-size: var(--title-sub);
+  }
+
+  .heading-bio {
+    font-size: var(--text-small);
+  }
+
+  .jobTitle {
+    flex-direction: column;
+    font-size: var(--text-body);
+  }
+  .jobDescription {
+    font-size: var(--text-small);
+  }
+
+  .educationSkills-wrapper {
+    flex-direction: column;
+  }
+
+  .skillsList > li {
+    font-size: var(--text-small);
+  }
+
+  .header-portrait {
+    border: none;
+    margin: auto;
+  }
 }
 
 .mt-025 {
