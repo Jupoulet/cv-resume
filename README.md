@@ -1,2 +1,4 @@
 # cv-resume
-My resume (maybe up to date)
+
+My html resume (maybe up to date).
+Host here: resume.julien-picard.com
